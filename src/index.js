@@ -38,6 +38,7 @@ prog
   .usage('<pattern> [function]')
   .arguments('<pattern> [function]')
   .option('-t, --test', 'Not actualy rename, just test renaming function')
+  .option('--exclude <pattern>', 'exclude folder glob')
   .action((pattern: string, expression: string) => {
     (async function doAction() {
       await action(pattern, expression);
